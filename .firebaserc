@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dev": "dev-dogepass",
+    "prod": "dogepass-032021"
+  }
+}
