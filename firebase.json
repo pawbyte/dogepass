@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "dogepass",
-      "public": "dist/dogepass",
+      "public": "dist",
       "ignore": [
         "**/.*"
       ],
