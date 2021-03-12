@@ -2,5 +2,21 @@
   "projects": {
     "dev": "dev-dogepass",
     "prod": "dogepass-032021"
+  },
+  "targets": {
+    "dev-dogepass": {
+      "hosting": {
+        "dogepass": [
+          "dev-dogepass"
+        ]
+      }
+    },
+    "dogepass-032021": {
+      "hosting": {
+        "dogepass": [
+          "dogepass-032021"
+        ]
+      }
+    }
   }
 }
