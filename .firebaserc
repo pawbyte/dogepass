@@ -1,7 +1,8 @@
 {
   "projects": {
     "dev": "dev-dogepass",
-    "prod": "dogepass-032021"
+    "prod": "dogepass-032021",
+    "default": "dev-dogepass"
   },
   "targets": {
     "dev-dogepass": {
