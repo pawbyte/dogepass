@@ -25,7 +25,7 @@
     "component-selector": [
       true,
       "element",
-      "app",
+      "dogepass",
       "kebab-case"
     ],
     "eofline": true,

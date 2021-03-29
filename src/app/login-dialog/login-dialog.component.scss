@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  max-width: 30em;
+  margin: 0 auto;
+}
+
+.mat-card {
+  background-color: inherit;
+  border: 1px solid #ddd;
+}
+
+mat-card mat-card-header {
+  display: inline;
+  text-align: center;
+}
+
+.login-selector {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-selector button {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
