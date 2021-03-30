@@ -1,7 +1,8 @@
 :host {
-  display: block;
-  max-width: 30em;
-  margin: 0 auto;
+  display: inline;
+  width: 30em;
+  vertical-align: middle;
+  transition: 1s all;
 }
 
 .mat-card {
@@ -22,4 +23,12 @@ mat-card mat-card-header {
 .login-selector button {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
+}
+
+.google {
+  background-color: #DB4437;
+}
+
+.facebook {
+  background-color: #3b5998;
 }
