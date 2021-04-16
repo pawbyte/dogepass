@@ -4,7 +4,7 @@
     <mat-card-subtitle *ngIf="!isAuthed">Choose a login method</mat-card-subtitle>
     <mat-card-subtitle *ngIf="isAuthed">Choose an action</mat-card-subtitle>
   </mat-card-header>
-  <mat-card-content>
+  <mat-card-content *ngIf="showState==1">
     <div *ngIf="auth.user | async as user; else showLogin" class="login-selector">
       <p>You are logged in as {{user.email}}</p>
       <button mat-stroked-button disabled>Profile</button>
@@ -23,9 +23,12 @@
     <br />
     <hr />
   </mat-card-content>
+  <mat-card-content *ngIf="showState==2">
+    <p class="text-center">Please insert your FIDO device.</p>
+  </mat-card-content>
   <mat-card-actions *ngIf="!isAuthed">
     <button mat-stroked-button>Trouble logging in?</button>
-    <button mat-stroked-button>2FA</button>
+    <button mat-stroked-button (click)="showState=2">2FA</button>
   </mat-card-actions>
   <mat-card-actions *ngIf="isAuthed">
     <a mat-stroked-button routerLink="/">Home</a>

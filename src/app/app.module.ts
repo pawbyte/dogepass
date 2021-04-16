@@ -17,6 +17,7 @@ import { environment } from '../environments/environment';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatSliderModule,
     MatCardModule,
     MatButtonModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

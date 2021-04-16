@@ -16,6 +16,7 @@ export class LoginDialogComponent implements OnInit {
 
   private readonly userDisposable: Subscription|undefined;
   public isAuthed = false;
+  public showState = 1;
 
   constructor(public readonly auth: AngularFireAuth,  @Inject(PLATFORM_ID) platformId: object) {
       if (!isPlatformServer(platformId)) {
