@@ -7,6 +7,8 @@ import { map } from 'rxjs/operators';
 import { isPlatformServer } from '@angular/common';
 import { Subscription } from 'rxjs';
 
+import { faKey } from '@fortawesome/pro-duotone-svg-icons';
+
 @Component({
   selector: 'dogepass-login-dialog',
   templateUrl: './login-dialog.component.html',
@@ -17,6 +19,7 @@ export class LoginDialogComponent implements OnInit {
   private readonly userDisposable: Subscription|undefined;
   public isAuthed = false;
   public showState = 1;
+  keyIcon = faKey;
 
   constructor(public readonly auth: AngularFireAuth,  @Inject(PLATFORM_ID) platformId: object) {
       if (!isPlatformServer(platformId)) {

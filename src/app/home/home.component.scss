@@ -24,3 +24,17 @@
   margin: 2em 0;
 }
 
+.appbar-spacer {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.mat-toolbar {
+  background-color: inherit;
+  border-bottom: 1px solid #ddd;
+}
+
+.appbar-spacer mat-form-field {
+  color: #999;
+  width: 30em;
+}

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!isAuthed; else authed">
   <div class="content">
     <div class="title">Dogepass</div>
     <br />
@@ -6,4 +6,21 @@
     <div class="subhead"><a routerLink="login">Login</a></div>
   </div>
 </div>
+<ng-template #authed>
+  <mat-toolbar>
+  <span>Dogepass</span>
+  <span class="appbar-spacer">
+    <mat-form-field class="example-form-field">
+      <input matInput type="text" [(ngModel)]="value" placeholder="such search wow">
+    </mat-form-field>
+  </span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>explore</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>face</mat-icon>
+  </button>
+  </mat-toolbar>
 
+
+</ng-template>
