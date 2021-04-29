@@ -40,6 +40,10 @@ jobs:
         with:
           name: dist
           path: dist
+      - name: Set active project
+        uses: w9jds/firebase-action@master
+        with:
+          args: use dev
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
