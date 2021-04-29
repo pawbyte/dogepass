@@ -11,15 +11,16 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      - name: Install Dependencies
+      - name: Setup NodeJS
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: npm install
+      - name: Install Dependencies
+        run: npm install
+         env:
+          FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
       - name: Build
         run: npm run build-prod
-        env:
-          FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
