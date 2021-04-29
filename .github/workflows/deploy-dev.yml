@@ -45,10 +45,10 @@ jobs:
         with:
           args: use dev
         env:
-          FIREBASE_TOKEN: ${{ secrets.DEV_FIREBASE_TOKEN }}
+          GCP_SA_KEY: ${{ secrets.DEV_GCP_SA_KEY }}
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
         env:
-          FIREBASE_TOKEN: ${{ secrets.DEV_FIREBASE_TOKEN }}
+          GCP_SA_KEY: ${{ secrets.DEV_GCP_SA_KEY }}
